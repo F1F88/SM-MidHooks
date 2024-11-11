@@ -117,7 +117,7 @@ jobs:
       - name: Compiling ${{ github.event.repository.name }} files
         working-directory: extension
         run: |
-          mkdir build && cd build
+          cd build
           python ../configure.py --enable-optimize --mms-path="${{ github.workspace }}/metamod-source" --sm-path="${{ github.workspace }}/sourcemod-${{ matrix.sm_version }}"
           ambuild
 
